@@ -2,7 +2,7 @@ import express from 'express';
 import { User } from '../models/user.js';
 import { Habit } from '../models/habit.js';
 import { ObjectId } from "mongodb"
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import nodemailer from "nodemailer"
 import { Code } from "../models/Code.js"
 import dotenv from "dotenv"
