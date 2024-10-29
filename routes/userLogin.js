@@ -114,7 +114,7 @@ router.post('/', async (request, response) => {
 
             }
         )
-
+        console.log("New user signed in: " +  request.body.userName)
         return response.status(201).send(modifiedUser);
     } catch (error) {
         console.log(error.message);
