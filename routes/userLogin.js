@@ -94,14 +94,26 @@ router.post('/', async (request, response) => {
         const user = await User.create(newUser); //using a mongoose.model which has a mongoose Schema
 
         const modifiedUser = {
-            _id: newID,
             userID: request.body.userName,
             userName: request.body.userName,
             email: request.body.email,
             passWord: hashedPassword,
             verified: false
         }
+        const demoHabit = await Habit.create(
+            {
+                desc: "Demo Habit",
+                archived: false,
+                success: false,
+                discrete: false,
+                userID: newID,
+                duration: 10,
+                lastLogin: 4,
+                createdAt: new Date(now.getTime() - 5 * 24 * 60 * 60 * 1000),
+                text: "This is a demo habit, feel free to deleted and make your own :-)"
 
+            }
+        )
 
         return response.status(201).send(modifiedUser);
     } catch (error) {
