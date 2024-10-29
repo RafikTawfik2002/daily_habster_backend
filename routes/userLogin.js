@@ -108,7 +108,7 @@ router.post('/', async (request, response) => {
                 discrete: false,
                 userID: newID,
                 duration: 10,
-                lastLogin: 4,
+                lastLogin: 5,
                 createdAt: new Date(new Date().getTime() - 5 * 24 * 60 * 60 * 1000),
                 text: "This is a demo habit, feel free to deleted and make your own :-)"
 
