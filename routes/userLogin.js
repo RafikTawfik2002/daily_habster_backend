@@ -110,7 +110,7 @@ router.post('/', async (request, response) => {
                 duration: 10,
                 lastLogin: 5,
                 createdAt: new Date(new Date().getTime() - 5 * 24 * 60 * 60 * 1000),
-                text: "This is a demo habit, feel free to deleted and make your own :-)"
+                text: "This is a demo habit, feel free to delete it or make it your own :-)"
 
             }
         )
