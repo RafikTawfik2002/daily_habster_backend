@@ -86,6 +86,7 @@ router.post('/', async (request, response) => {
             secure: true,         // Only sent over HTTPS
             sameSite: 'None',   // CSRF protection
             maxAge: 30 * 24 * 60 * 60 * 1000, // 7-day expiration
+            path: '/'
         });
 
   

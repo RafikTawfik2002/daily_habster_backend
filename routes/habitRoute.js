@@ -39,6 +39,7 @@ const verifyByHabitID = async (request, habitID) => {
         }
         const userID = decoded.userID 
         // if token is verified and decoded check userID matches userName
+        console.log("HabitID : " + habitID)
         const habitUserID = (await Habit.findById(habitID)).userID
         if(habitUserID != userID){return -1}
         
