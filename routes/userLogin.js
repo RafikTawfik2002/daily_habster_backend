@@ -85,6 +85,7 @@ router.post('/', async (request, response) => {
             httpOnly: true,      // Prevents JavaScript access (XSS protection)
             secure: true,         // Only sent over HTTPS
             sameSite: 'None',   // CSRF protection
+            domain: 'https://dailyhabster.vercel.app',
             maxAge: 30 * 24 * 60 * 60 * 1000, // 7-day expiration
             path: '/'
         });
@@ -147,6 +148,7 @@ router.post('/authenticate', async (request, response) => {
             httpOnly: true,      
             secure: true,                       // Only sent over HTTPS
             sameSite: 'None',   
+            domain: 'https://dailyhabster.vercel.app',
             maxAge: 30 * 24 * 60 * 60 * 1000,    // 30-day expiration
         });
     
